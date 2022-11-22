@@ -5,12 +5,12 @@ import java.util.List;
 
 public class Examen {
     private Long id;
-    private String name;
+    private String nombre;
     private List<String> preguntas;
 
-    public Examen(Long id, String name) {
+    public Examen(Long id, String nombre) {
         this.id = id;
-        this.name = name;
+        this.nombre = nombre;
         this.preguntas = new ArrayList<>();
     }
 
@@ -22,12 +22,12 @@ public class Examen {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public List<String> getPreguntas() {
