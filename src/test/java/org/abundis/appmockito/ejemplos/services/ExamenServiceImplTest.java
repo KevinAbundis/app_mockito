@@ -210,7 +210,5 @@ class ExamenServiceImplTest {
         verify(preguntaRepository).findPreguntasPorExamenId(captor.capture());
 
         assertEquals(5L, captor.getValue());
-
-
     }
 }
