@@ -6,6 +6,12 @@ import org.abundis.appmockito.ejemplos.repositories.ExamenRepositoryOtro;
 import org.abundis.appmockito.ejemplos.repositories.PreguntaRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
+
 import static org.mockito.Mockito.*;
 
 import java.util.Arrays;
@@ -15,17 +21,25 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@ExtendWith(MockitoExtension.class)
 class ExamenServiceImplTest {
+    @Mock
     ExamenRepository repository;
-    ExamenService service;
+
+    @Mock
     PreguntaRepository preguntaRepository;
 
-    @BeforeEach
-    void setUp() {
-        repository = mock(ExamenRepository.class);
-        preguntaRepository = mock(PreguntaRepository.class);
-        service = new ExamenServiceImpl(repository,preguntaRepository);
-    }
+    @InjectMocks
+    ExamenServiceImpl service;
+
+
+//    @BeforeEach
+//    void setUp() {
+//        MockitoAnnotations.openMocks(this);
+//         repository = mock(ExamenRepository.class);
+//         preguntaRepository = mock(PreguntaRepository.class);
+//         service = new ExamenServiceImpl(repository,preguntaRepository);
+//    }
 
     @Test
     void findExamenPorNombre() {
