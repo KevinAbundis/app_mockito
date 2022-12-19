@@ -15,4 +15,6 @@ public class Datos {
             "derivadas",
             "trigonometría",
             "geometría");
+
+    public final static Examen EXAMEN = new Examen(8L, "Física");
 }
