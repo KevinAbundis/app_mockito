@@ -1,4 +1,4 @@
-package org.abundis.appmockito.ejemplos.services;
+package org.abundis.appmockito.ejemplos;
 
 import org.abundis.appmockito.ejemplos.models.Examen;
 
