@@ -15,8 +15,8 @@ public class ExamenRepositoryImpl implements ExamenRepository{
 
     @Override
     public List<Examen> findAll() {
+        System.out.println("ExamenRepositoryImpl.findAll");
         try {
-            System.out.println("ExamenRepositoryImpl.findAll");
             TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
